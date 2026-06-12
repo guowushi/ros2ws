@@ -1,0 +1,1812 @@
+[modbus]
+ip = "192.168.3.7"
+port = 502
+description = "Modbus通信配置文件"
+version = "2026-03-13"
+
+[[tags]]
+group = "机器人坐标"
+name = "A1"
+description = "关节轴角度基座旋转关节 (Base / Shoulder Pan Joint)"
+register_type = "保持寄存器"
+start_address = 1002
+length = 1
+kep_address = "%MW01002"
+data_type = "Short"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "机器人坐标"
+name = "A2"
+description = "关节轴角度肩部俯仰关节 (Shoulder Pitch / Lift Joint)"
+register_type = "保持寄存器"
+start_address = 1004
+length = 1
+kep_address = "%MW01004"
+data_type = "Short"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "机器人坐标"
+name = "A3"
+description = "关节轴角度肘部旋转关节 (Elbow Roll Joint)"
+register_type = "保持寄存器"
+start_address = 1006
+length = 1
+kep_address = "%MW01006"
+data_type = "Short"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "机器人坐标"
+name = "A4"
+description = "关节轴角度肘部俯仰关节 (Elbow Pitch / Flex Joint)"
+register_type = "保持寄存器"
+start_address = 1008
+length = 1
+kep_address = "%MW01008"
+data_type = "Short"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "机器人坐标"
+name = "A5"
+description = "关节轴角度腕部旋转关节 (Wrist Roll Joint)"
+register_type = "保持寄存器"
+start_address = 1010
+length = 1
+kep_address = "%MW01010"
+data_type = "Short"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "机器人坐标"
+name = "A6"
+description = "关节轴角度腕部俯仰关节 (WristPitch / FlexJoint)"
+register_type = "保持寄存器"
+start_address = 1012
+length = 1
+kep_address = "%MW01012"
+data_type = "Short"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "机器人坐标"
+name = "X"
+description = "笛卡尔坐标，指向机器人前方"
+register_type = "保持寄存器"
+start_address = 1014
+length = 1
+kep_address = "%MW01014"
+data_type = "Short"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "机器人坐标"
+name = "Y"
+description = "笛卡尔坐标，指向机器人左侧"
+register_type = "保持寄存器"
+start_address = 1016
+length = 1
+kep_address = "%MW01016"
+data_type = "Short"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "机器人坐标"
+name = "Z"
+description = "笛卡尔坐标，指向上方"
+register_type = "保持寄存器"
+start_address = 1018
+length = 1
+kep_address = "%MW01018"
+data_type = "Short"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "机器人坐标"
+name = "A"
+description = "机器人姿态角，绕X轴旋转（翻滚）"
+register_type = "保持寄存器"
+start_address = 1020
+length = 1
+kep_address = "%MW01020"
+data_type = "Short"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "机器人坐标"
+name = "B"
+description = "机器人姿态角，绕Y轴旋转（俯仰）"
+register_type = "保持寄存器"
+start_address = 1022
+length = 1
+kep_address = "%MW01022"
+data_type = "Short"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "机器人坐标"
+name = "C"
+description = "机器人姿态角，绕Z轴旋转（偏航）"
+register_type = "保持寄存器"
+start_address = 1024
+length = 1
+kep_address = "%MW01024"
+data_type = "Short"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "外部旋转轴"
+name = "EXT_AXIS_POSITION_ANGLE_1"
+description = "第1个外部旋转轴的角度值"
+register_type = "保持寄存器"
+start_address = 7402
+length = 1
+kep_address = "%MW07402"
+data_type = "Short"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "外部旋转轴"
+name = "EXT_AXIS_POSITION_ANGLE_2"
+description = "第2个外部旋转轴的角度值"
+register_type = "保持寄存器"
+start_address = 7404
+length = 1
+kep_address = "%MW07404"
+data_type = "Short"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "外部旋转轴"
+name = "EXT_AXIS_POSITION_ANGLE_3"
+description = "第3个外部旋转轴的角度值"
+register_type = "保持寄存器"
+start_address = 7406
+length = 1
+kep_address = "%MW07406"
+data_type = "Short"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "外部旋转轴"
+name = "EXT_AXIS_POSITION_ANGLE_4"
+description = "第4个外部旋转轴的角度值"
+register_type = "保持寄存器"
+start_address = 7408
+length = 1
+kep_address = "%MW07408"
+data_type = "Short"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "外部旋转轴"
+name = "EXT_AXIS_POSITION_ANGLE_5"
+description = "第5个外部旋转轴的角度值"
+register_type = "保持寄存器"
+start_address = 7410
+length = 1
+kep_address = "%MW07410"
+data_type = "Short"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "外部旋转轴"
+name = "EXT_AXIS_POSITION_ANGLE_6"
+description = "第5个外部旋转轴的角度值"
+register_type = "保持寄存器"
+start_address = 7412
+length = 1
+kep_address = "%MW07412"
+data_type = "Short"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "外部直线轴"
+name = "EXT_AXIS_POSITION_DISTANCE_1"
+description = "第1个直线轴的位移距离"
+register_type = "保持寄存器"
+start_address = 7422
+length = 1
+kep_address = "%MW07422"
+data_type = "Short"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "外部直线轴"
+name = "EXT_AXIS_POSITION_DISTANCE_2"
+description = "第2个直线轴的位移距离"
+register_type = "保持寄存器"
+start_address = 7424
+length = 1
+kep_address = "%MW07424"
+data_type = "Short"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "外部直线轴"
+name = "EXT_AXIS_POSITION_DISTANCE_3"
+description = "第3个直线轴的位移距离"
+register_type = "保持寄存器"
+start_address = 7426
+length = 1
+kep_address = "%MW07426"
+data_type = "Short"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "外部直线轴"
+name = "EXT_AXIS_POSITION_DISTANCE_4"
+description = "第4个直线轴的位移距离"
+register_type = "保持寄存器"
+start_address = 7428
+length = 1
+kep_address = "%MW07428"
+data_type = "Short"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "外部直线轴"
+name = "EXT_AXIS_POSITION_DISTANCE_5"
+description = "第5个直线轴的位移距离"
+register_type = "保持寄存器"
+start_address = 7430
+length = 1
+kep_address = "%MW07430"
+data_type = "Short"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "外部直线轴"
+name = "EXT_AXIS_POSITION_DISTANCE_6"
+description = "第6个直线轴的位移距离"
+register_type = "保持寄存器"
+start_address = 7432
+length = 1
+kep_address = "%MW07432"
+data_type = "Short"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "外部轴使能"
+name = "EXT_AXIS_POSITION_EN_1"
+description = "第1个外部轴的使能开关"
+register_type = "保持寄存器"
+start_address = 7400
+length = 1
+kep_address = "%MW07400.0"
+data_type = "Boolean"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "外部轴使能"
+name = "EXT_AXIS_POSITION_EN_2"
+description = "第2个外部轴的使能开关"
+register_type = "保持寄存器"
+start_address = 7400
+length = 1
+kep_address = "%MW07400.1"
+data_type = "Boolean"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "外部轴使能"
+name = "EXT_AXIS_POSITION_EN_3"
+description = "第3个外部轴的使能开关"
+register_type = "保持寄存器"
+start_address = 7400
+length = 1
+kep_address = "%MW07400.2"
+data_type = "Boolean"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "外部轴使能"
+name = "EXT_AXIS_POSITION_EN_4"
+description = "第4个外部轴的使能开关"
+register_type = "保持寄存器"
+start_address = 7400
+length = 1
+kep_address = "%MW07400.3"
+data_type = "Boolean"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "外部轴使能"
+name = "EXT_AXIS_POSITION_EN_5"
+description = "第5个外部轴的使能开关"
+register_type = "保持寄存器"
+start_address = 7400
+length = 1
+kep_address = "%MW07400.4"
+data_type = "Boolean"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "外部轴使能"
+name = "EXT_AXIS_POSITION_EN_6"
+description = "第6个外部轴的使能开关"
+register_type = "保持寄存器"
+start_address = 7400
+length = 1
+kep_address = "%MW07400.5"
+data_type = "Boolean"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "外部轴到位"
+name = "EXT_AXIS_POSITION_INPLACE_1"
+description = "第1个外部轴的到位检测"
+register_type = "保持寄存器"
+start_address = 7420
+length = 1
+kep_address = "%MW07420.0"
+data_type = "Boolean"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "外部轴到位"
+name = "EXT_AXIS_POSITION_INPLACE_2"
+description = "第2个外部轴的到位检测"
+register_type = "保持寄存器"
+start_address = 7420
+length = 1
+kep_address = "%MW07420.1"
+data_type = "Boolean"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "外部轴到位"
+name = "EXT_AXIS_POSITION_INPLACE_3"
+description = "第3个外部轴的到位检测"
+register_type = "保持寄存器"
+start_address = 7420
+length = 1
+kep_address = "%MW07420.2"
+data_type = "Boolean"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "外部轴到位"
+name = "EXT_AXIS_POSITION_INPLACE_4"
+description = "第4个外部轴的到位检测"
+register_type = "保持寄存器"
+start_address = 7420
+length = 1
+kep_address = "%MW07420.3"
+data_type = "Boolean"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "外部轴到位"
+name = "EXT_AXIS_POSITION_INPLACE_5"
+description = "第5个外部轴的到位检测"
+register_type = "保持寄存器"
+start_address = 7420
+length = 1
+kep_address = "%MW07420.4"
+data_type = "Boolean"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "外部轴到位"
+name = "EXT_AXIS_POSITION_INPLACE_6"
+description = "第6个外部轴的到位检测"
+register_type = "保持寄存器"
+start_address = 7420
+length = 1
+kep_address = "%MW07420.5"
+data_type = "Boolean"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "外部轴运动"
+name = "EXT_AXIS_POSITION_MOVING_1"
+description = "第1个外部轴的运动中检测"
+register_type = "保持寄存器"
+start_address = 7421
+length = 1
+kep_address = "%MW07421.0"
+data_type = "Boolean"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "外部轴运动"
+name = "EXT_AXIS_POSITION_MOVING_2"
+description = "第2个外部轴的运动中检测"
+register_type = "保持寄存器"
+start_address = 7421
+length = 1
+kep_address = "%MW07421.1"
+data_type = "Boolean"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "外部轴运动"
+name = "EXT_AXIS_POSITION_MOVING_3"
+description = "第3个外部轴的运动中检测"
+register_type = "保持寄存器"
+start_address = 7421
+length = 1
+kep_address = "%MW07421.2"
+data_type = "Boolean"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "外部轴运动"
+name = "EXT_AXIS_POSITION_MOVING_4"
+description = "第4个外部轴的运动中检测"
+register_type = "保持寄存器"
+start_address = 7421
+length = 1
+kep_address = "%MW07421.3"
+data_type = "Boolean"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "外部轴运动"
+name = "EXT_AXIS_POSITION_MOVING_5"
+description = "第5个外部轴的运动中检测"
+register_type = "保持寄存器"
+start_address = 7421
+length = 1
+kep_address = "%MW07421.4"
+data_type = "Boolean"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "外部轴运动"
+name = "EXT_AXIS_POSITION_MOVING_6"
+description = "第6个外部轴的运动中检测"
+register_type = "保持寄存器"
+start_address = 7421
+length = 1
+kep_address = "%MW07421.5"
+data_type = "Boolean"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "统计数据"
+name = "CUMULATIVE_POWERON_TIME"
+description = "累计开机时间"
+register_type = "保持寄存器"
+start_address = 7500
+length = 2
+kep_address = "%MW07500"
+data_type = "DWord"
+access_right = "读写"
+scan_rate = 1000
+enable = true
+
+[[tags]]
+group = "统计数据"
+name = "CUMULATIVE_RUN_TIME"
+description = "累计运行时间"
+register_type = "保持寄存器"
+start_address = 7502
+length = 2
+kep_address = "%MW07502"
+data_type = "DWord"
+access_right = "读写"
+scan_rate = 1000
+enable = true
+
+[[tags]]
+group = "统计数据"
+name = "CUMULATIVE_POLISH_TIME"
+description = "累计打磨时间"
+register_type = "保持寄存器"
+start_address = 7504
+length = 2
+kep_address = "%MW07504"
+data_type = "DWord"
+access_right = "读写"
+scan_rate = 1000
+enable = true
+
+[[tags]]
+group = "统计数据"
+name = "POWERON_TIME"
+description = "当班开机时间"
+register_type = "保持寄存器"
+start_address = 7506
+length = 1
+kep_address = "%MW07506"
+data_type = "Word"
+access_right = "读写"
+scan_rate = 1000
+enable = true
+
+[[tags]]
+group = "统计数据"
+name = "POLISH_TIME"
+description = "当班打磨时间"
+register_type = "保持寄存器"
+start_address = 7508
+length = 1
+kep_address = "%MW07508"
+data_type = "Word"
+access_right = "读写"
+scan_rate = 1000
+enable = true
+
+[[tags]]
+group = "统计数据"
+name = "POLISH_AREA"
+description = "当班打磨面积"
+register_type = "保持寄存器"
+start_address = 7510
+length = 1
+kep_address = "%MW07510"
+data_type = "Word"
+access_right = "读写"
+scan_rate = 1000
+enable = true
+
+[[tags]]
+group = ""
+name = "USER_NAME"
+description = "操作人员编码"
+register_type = "保持寄存器"
+start_address = 7520
+length = 16
+kep_address = "M_%MW07520_16L"
+data_type = "String"
+access_right = "读写"
+scan_rate = 1000
+enable = true
+
+[[tags]]
+group = ""
+name = "PROCESS_PARAM_PRESS"
+description = "工艺参数-打磨压力"
+register_type = "保持寄存器"
+start_address = 7600
+length = 1
+kep_address = "%MW07600"
+data_type = "Word"
+access_right = "只读"
+scan_rate = 1000
+enable = true
+
+[[tags]]
+group = ""
+name = "PROCESS_PARAM_WALKING_SPEED"
+description = "工艺参数-打磨工具转速"
+register_type = "保持寄存器"
+start_address = 7602
+length = 1
+kep_address = "%MW07602"
+data_type = "Word"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "PROCESS_PARAM_ROTATE_SPEED"
+description = "工艺参数-行走速度"
+register_type = "保持寄存器"
+start_address = 7604
+length = 1
+kep_address = "%MW07604"
+data_type = "Word"
+access_right = "只读"
+scan_rate = 1000
+enable = true
+
+[[tags]]
+group = ""
+name = "PATHS_COMPUTE_FINISHED_FLAG"
+description = "路径计算完成标志"
+register_type = "保持寄存器"
+start_address = 7910
+length = 1
+kep_address = "%MW07910.0"
+data_type = "Boolean"
+access_right = "读写"
+scan_rate = 1000
+enable = true
+
+[[tags]]
+group = ""
+name = "REQ_PATH_FLAG"
+description = "PLC请求当前路径的标志信号"
+register_type = "保持寄存器"
+start_address = 7910
+length = 1
+kep_address = "%MW07910.1"
+data_type = "Boolean"
+access_right = "读写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "REQ_RECEIVE_READY_FLAG"
+description = "PLC接收点数据准备就绪信号"
+register_type = "保持寄存器"
+start_address = 7910
+length = 1
+kep_address = "%MW07910.2"
+data_type = "Boolean"
+access_right = "读写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "REQ_PAGE_FLAG"
+description = "PLC请求分页信号"
+register_type = "保持寄存器"
+start_address = 7910
+length = 1
+kep_address = "%MW07910.3"
+data_type = "Boolean"
+access_right = "读写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "RESP_PAGE_SENDED_FLAG"
+description = "PC写入-当前页数据传输完成信号"
+register_type = "保持寄存器"
+start_address = 7910
+length = 1
+kep_address = "%MW07910.4"
+data_type = "Boolean"
+access_right = "读写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "STAT_POLISHING_FLAG"
+description = "当前状态-是否打磨标记"
+register_type = "保持寄存器"
+start_address = 7910
+length = 1
+kep_address = "%MW07910.5"
+data_type = "Boolean"
+access_right = "读写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "STAT_PAUSED_FLAG"
+description = "当前状态-是否暂停标记"
+register_type = "保持寄存器"
+start_address = 7910
+length = 1
+kep_address = "%MW07910.6"
+data_type = "Boolean"
+access_right = "读写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "STAT_PC_HEARTBEAT"
+description = "当前状态-PC心跳"
+register_type = "保持寄存器"
+start_address = 7910
+length = 1
+kep_address = "%MW07910.7"
+data_type = "Boolean"
+access_right = "读写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "WORKPIECE_NAME"
+description = "当前的工件编号"
+register_type = "保持寄存器"
+start_address = 7920
+length = 16
+kep_address = "M_%MW07920_16L"
+data_type = "String"
+access_right = "读写"
+scan_rate = 1000
+enable = true
+
+[[tags]]
+group = ""
+name = "PATHS_COUNT"
+description = "已计算出来的总路径条数"
+register_type = "保持寄存器"
+start_address = 7930
+length = 1
+kep_address = "%MW07930"
+data_type = "Word"
+access_right = "读写"
+scan_rate = 1000
+enable = true
+
+[[tags]]
+group = ""
+name = "PATHS_SURFACE_AREA"
+description = "路径的表面积"
+register_type = "保持寄存器"
+start_address = 7932
+length = 2
+kep_address = "%MW07932"
+data_type = "DWord"
+access_right = "读写"
+scan_rate = 1000
+enable = true
+
+[[tags]]
+group = ""
+name = "PATHS_IDX"
+description = "需要打磨路径的编号"
+register_type = "保持寄存器"
+start_address = 7934
+length = 1
+kep_address = "%MW07934"
+data_type = "Word"
+access_right = "读写"
+scan_rate = 1000
+enable = true
+
+[[tags]]
+group = ""
+name = "PATHS_POINT_COUNT"
+description = "需要打磨路径的点数量"
+register_type = "保持寄存器"
+start_address = 7936
+length = 2
+kep_address = "%MW07936"
+data_type = "DWord"
+access_right = "读写"
+scan_rate = 1000
+enable = true
+
+[[tags]]
+group = ""
+name = "REQ_PATH_IDX"
+description = "PLC请求的当前路径编号"
+register_type = "保持寄存器"
+start_address = 7938
+length = 1
+kep_address = "%MW07938"
+data_type = "Word"
+access_right = "读写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "REQ_PATH_WORKPIECE_NAME"
+description = "PLC请求当前路径的工件编号"
+register_type = "保持寄存器"
+start_address = 7940
+length = 16
+kep_address = "M_%MW07940_16L"
+data_type = "String"
+access_right = "读写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "RESP_PAGE_SIZE"
+description = "PC写入-分页尺寸"
+register_type = "保持寄存器"
+start_address = 7950
+length = 1
+kep_address = "%MW07950"
+data_type = "Word"
+access_right = "读写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "RESP_PAGE_COUNT"
+description = "PC写入-当前路径的总页数"
+register_type = "保持寄存器"
+start_address = 7952
+length = 1
+kep_address = "%MW07952"
+data_type = "Word"
+access_right = "读写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "REQ_PAGE_IDX"
+description = "PLC请求页码"
+register_type = "保持寄存器"
+start_address = 7954
+length = 1
+kep_address = "%MW07954"
+data_type = "Word"
+access_right = "读写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "RESP_PAGE_POINT_COUNT"
+description = "PC写入的当前页点数量"
+register_type = "保持寄存器"
+start_address = 7956
+length = 2
+kep_address = "%MW07956"
+data_type = "DWord"
+access_right = "读写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "RESP_PAGE_OFFSET"
+description = "PC写入的当前页起始点编号"
+register_type = "保持寄存器"
+start_address = 7958
+length = 2
+kep_address = "%MW07958"
+data_type = "DWord"
+access_right = "读写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "ROBOT_LOCATION"
+description = "机器人位置XYZABC"
+register_type = "保持寄存器"
+start_address = 7960
+length = 6
+kep_address = "%MW07960_6"
+data_type = "Float Array"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "ROBOT_BASE"
+description = "机器人基坐标"
+register_type = "保持寄存器"
+start_address = 7972
+length = 6
+kep_address = "%MW07972_6"
+data_type = "Float Array"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "ROBOT_TOOL"
+description = "机器人工具坐标"
+register_type = "保持寄存器"
+start_address = 7984
+length = 6
+kep_address = "%MW07984_6"
+data_type = "Float Array"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "STAT_ERR_CODE"
+description = "当前状态-错误代码"
+register_type = "保持寄存器"
+start_address = 7804
+length = 1
+kep_address = "%MW07804"
+data_type = "Word"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "STAT_ALARM_FLG"
+description = "当前设备报警状态标志"
+register_type = "保持寄存器"
+start_address = 7806
+length = 6
+kep_address = "%MW07806_6"
+data_type = "Long Array"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "STAT_AIXS_CURRENT"
+description = "机器人各轴电流"
+register_type = "保持寄存器"
+start_address = 7810
+length = 9
+kep_address = "%MW07810_9"
+data_type = "Long Array"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "STAT_POWER_VOLTAGE"
+description = "供电电压"
+register_type = "保持寄存器"
+start_address = 7810
+length = 3
+kep_address = "%MW07810_3"
+data_type = "Long Array"
+access_right = "只读"
+scan_rate = 1000
+enable = true
+
+[[tags]]
+group = ""
+name = "STAT_POWER_CURRENT"
+description = "供电电流"
+register_type = "保持寄存器"
+start_address = 7824
+length = 3
+kep_address = "%MW07824_3"
+data_type = "Long Array"
+access_right = "只读"
+scan_rate = 1000
+enable = true
+
+[[tags]]
+group = ""
+name = "STAT_POWER"
+description = "当前用功率"
+register_type = "保持寄存器"
+start_address = 7830
+length = 1
+kep_address = "%MW07830"
+data_type = "Word"
+access_right = "只读"
+scan_rate = 1000
+enable = true
+
+[[tags]]
+group = ""
+name = "STAT_ELECTRICITY"
+description = "当前用电量"
+register_type = "保持寄存器"
+start_address = 7832
+length = 2
+kep_address = "%MW07832"
+data_type = "DWord"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "STAT_PRESSURE"
+description = "当前气压"
+register_type = "保持寄存器"
+start_address = 7834
+length = 1
+kep_address = "%MW07834"
+data_type = "Word"
+access_right = "只读"
+scan_rate = 1000
+enable = true
+
+[[tags]]
+group = ""
+name = "STAT_WATER_PRESSURE"
+description = "当前水压"
+register_type = "保持寄存器"
+start_address = 7836
+length = 1
+kep_address = "%MW07836"
+data_type = "Word"
+access_right = "只读"
+scan_rate = 1000
+enable = true
+
+[[tags]]
+group = ""
+name = "STAT_WATER_FLOW"
+description = "冷却水流量"
+register_type = "保持寄存器"
+start_address = 7838
+length = 1
+kep_address = "%MW07838"
+data_type = "Word"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "STAT_WHEEL_RADIUS"
+description = "砂轮半径"
+register_type = "保持寄存器"
+start_address = 7840
+length = 1
+kep_address = "%MW07840"
+data_type = "Word"
+access_right = "只读"
+scan_rate = 1000
+enable = true
+
+[[tags]]
+group = ""
+name = "STAT_RAIL_OFFSET"
+description = "导轨位移"
+register_type = "保持寄存器"
+start_address = 7842
+length = 2
+kep_address = "%MW07842"
+data_type = "Float"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "TIMESTAMP"
+description = "时间"
+register_type = "保持寄存器"
+start_address = 4000
+length = 6
+kep_address = "%MW04000_6"
+data_type = "Long Array"
+access_right = "读写"
+scan_rate = 1000
+enable = true
+
+[[tags]]
+group = ""
+name = "BUF_POINT_TYPE"
+description = "缓冲区-路径点的坐标类型"
+register_type = "保持寄存器"
+start_address = 10000
+length = 30
+kep_address = "%MW10000_30"
+data_type = "Long Array"
+access_right = "只写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "BUF_POINT_CMD_TYPE"
+description = "缓冲区-路径点命令类型"
+register_type = "保持寄存器"
+start_address = 11000
+length = 30
+kep_address = "%MW11000_30"
+data_type = "Long Array"
+access_right = "只写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "BUF_POINT_LINE_ID"
+description = "缓冲区-路径点点行号"
+register_type = "保持寄存器"
+start_address = 12000
+length = 30
+kep_address = "%MW12000_30"
+data_type = "Float Array"
+access_right = "只写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "BUF_POINT_X"
+description = "缓冲区-机器人点坐标1"
+register_type = "保持寄存器"
+start_address = 13000
+length = 30
+kep_address = "%MW13000_30"
+data_type = "Float Array"
+access_right = "只写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "BUF_POINT_Y"
+description = "缓冲区-机器人点坐标2"
+register_type = "保持寄存器"
+start_address = 15000
+length = 30
+kep_address = "%MW15000_30"
+data_type = "Float Array"
+access_right = "只写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "BUF_POINT_Z"
+description = "缓冲区-机器人点坐标3"
+register_type = "保持寄存器"
+start_address = 17000
+length = 30
+kep_address = "%MW17000_30"
+data_type = "Float Array"
+access_right = "只写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "BUF_POINT_A"
+description = "缓冲区-机器人点坐标4"
+register_type = "保持寄存器"
+start_address = 19000
+length = 30
+kep_address = "%MW19000_30"
+data_type = "Float Array"
+access_right = "只写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "BUF_POINT_B"
+description = "缓冲区-机器人点坐标5"
+register_type = "保持寄存器"
+start_address = 21000
+length = 30
+kep_address = "%MW21000_30"
+data_type = "Float Array"
+access_right = "只写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "BUF_POINT_C"
+description = "缓冲区-机器人点坐标6"
+register_type = "保持寄存器"
+start_address = 23000
+length = 30
+kep_address = "%MW23000_30"
+data_type = "Float Array"
+access_right = "只写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "BUF_POINT_EXT_1"
+description = "缓冲区-外部轴坐标1"
+register_type = "保持寄存器"
+start_address = 25000
+length = 30
+kep_address = "%MW25000_30"
+data_type = "Float Array"
+access_right = "只写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "BUF_POINT_EXT_2"
+description = "缓冲区-外部轴坐标2"
+register_type = "保持寄存器"
+start_address = 27000
+length = 30
+kep_address = "%MW27000_30"
+data_type = "Float Array"
+access_right = "只写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "BUF_POINT_EXT_3"
+description = "缓冲区-外部轴坐标3"
+register_type = "保持寄存器"
+start_address = 29000
+length = 30
+kep_address = "%MW29000_30"
+data_type = "Float Array"
+access_right = "只写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "BUF_POINT_EXT_4"
+description = "缓冲区-外部轴坐标4"
+register_type = "保持寄存器"
+start_address = 31000
+length = 30
+kep_address = "%MW31000_30"
+data_type = "Float Array"
+access_right = "只写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "BUF_POINT_EXT_5"
+description = "缓冲区-外部轴坐标5"
+register_type = "保持寄存器"
+start_address = 33000
+length = 30
+kep_address = "%MW33000_30"
+data_type = "Float Array"
+access_right = "只写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "BUF_POINT_EXT_6"
+description = "缓冲区-外部轴坐标6"
+register_type = "保持寄存器"
+start_address = 35000
+length = 30
+kep_address = "%MW35000_30"
+data_type = "Float Array"
+access_right = "只写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "BUF_POINT_ID"
+description = "缓冲区-路径点编号"
+register_type = "保持寄存器"
+start_address = 8000
+length = 30
+kep_address = "%MW08000_30"
+data_type = "Float Array"
+access_right = "只写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "SCAN_NAME"
+description = "扫描相关-被扫描工件编号"
+register_type = "保持寄存器"
+start_address = 7700
+length = 1
+kep_address = "M_%MW07700_16"
+data_type = "String"
+access_right = "只写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "SCAN_EXT"
+description = "扫描相关-外部直线轴当前坐标"
+register_type = "保持寄存器"
+start_address = 7710
+length = 6
+kep_address = "%MW07710_6"
+data_type = "Float Array"
+access_right = "只写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "SCAN_XYZ"
+description = "扫描相关-机器人当前笛卡尔坐标位置"
+register_type = "保持寄存器"
+start_address = 7720
+length = 6
+kep_address = "%MW07720_6"
+data_type = "Float Array"
+access_right = "只写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "SCAN_GAP_Y"
+description = "扫描相关-扫描拍照间距纵向"
+register_type = "保持寄存器"
+start_address = 7740
+length = 1
+kep_address = "%MW07740"
+data_type = "Word"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "SCAN_GAP_X"
+description = "扫描相关-扫描拍照间距横向"
+register_type = "保持寄存器"
+start_address = 7742
+length = 1
+kep_address = "%MW07742"
+data_type = "Word"
+access_right = "只读"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "SCAN_SPEED"
+description = "扫描相关-扫描时移动速度"
+register_type = "保持寄存器"
+start_address = 7744
+length = 1
+kep_address = "%MW07744"
+data_type = "Word"
+access_right = "读写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "扫描标志位"
+name = "SCAN_READY"
+description = "扫描相关-PC扫描就绪标志（表示可以开始扫描）"
+register_type = "保持寄存器"
+start_address = 7732
+length = 1
+kep_address = "%MW07732.0"
+data_type = "Boolean"
+access_right = "读写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "扫描标志位"
+name = "SCAN_REQ"
+description = "扫描相关-打磨终端扫描请求标志"
+register_type = "保持寄存器"
+start_address = 7732
+length = 1
+kep_address = "%MW07732.1"
+data_type = "Boolean"
+access_right = "读写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "扫描标志位"
+name = "SCAN_BEGIN"
+description = "扫描相关-打磨终端扫描开始标志"
+register_type = "保持寄存器"
+start_address = 7732
+length = 1
+kep_address = "%MW07732.2"
+data_type = "Boolean"
+access_right = "只写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "扫描标志位"
+name = "SCAN_END"
+description = "扫描相关-打磨终端扫描结束标志"
+register_type = "保持寄存器"
+start_address = 7732
+length = 1
+kep_address = "%MW07732.3"
+data_type = "Boolean"
+access_right = "读写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "扫描标志位"
+name = "SCAN_SUSPEND"
+description = "扫描相关-扫描中PC意外终止标志"
+register_type = "保持寄存器"
+start_address = 7732
+length = 1
+kep_address = "%MW07732.4"
+data_type = "Boolean"
+access_right = "读写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "扫描标志位"
+name = "SCAN_DATA_REV"
+description = "扫描相关-扫描数据接收完成标志"
+register_type = "保持寄存器"
+start_address = 7732
+length = 1
+kep_address = "%MW07732.5"
+data_type = "Boolean"
+access_right = "读写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "扫描标志位"
+name = "SCAN_ON_POS"
+description = "扫描相关-拍照点到位标志"
+register_type = "保持寄存器"
+start_address = 7732
+length = 1
+kep_address = "%MW07732.6"
+data_type = "Boolean"
+access_right = "读写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = "扫描标志位"
+name = "SCAN_PIC_REV"
+description = "扫描相关-当前图片接收成功标志"
+register_type = "保持寄存器"
+start_address = 7732
+length = 1
+kep_address = "%MW07732.7"
+data_type = "Boolean"
+access_right = "读写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "HMI_REATE_MODELING_READY_KEY"
+description = "HMI发出准备创建模型按键"
+register_type = "保持寄存器"
+start_address = 54
+length = 1
+kep_address = "%MX54.7"
+data_type = "Boolean"
+access_right = "读写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "HMI_ROBOT_RECEIVE_TO_ORIGIN_KEY"
+description = "HMI发出机器人回原点按键"
+register_type = "保持寄存器"
+start_address = 55
+length = 1
+kep_address = "%MX55.0"
+data_type = "Boolean"
+access_right = "读写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "HMI_TOOL_QUICK_CHANGE_CABINET_OPEN_KEY"
+description = "HMI发出工具快换柜打开按键"
+register_type = "保持寄存器"
+start_address = 55
+length = 1
+kep_address = "%MX55.1"
+data_type = "Boolean"
+access_right = "读写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "HMI_TOOL_QUICK_CHANGE_CABINET_CLOSE_KEY"
+description = "HMI发出工具快换柜关闭按键"
+register_type = "保持寄存器"
+start_address = 55
+length = 1
+kep_address = "%MX55.2"
+data_type = "Boolean"
+access_right = "读写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "HMI_RAIL_RECEIVE_TO_ORIGIN_KEY"
+description = "HMI发出导轨回原点按键"
+register_type = "保持寄存器"
+start_address = 55
+length = 1
+kep_address = "%MX55.3"
+data_type = "Boolean"
+access_right = "读写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "HMI_CAMERO_GRIPPER_OPEN_KEY"
+description = "HMI发出相机气爪打开按键"
+register_type = "保持寄存器"
+start_address = 55
+length = 1
+kep_address = "%MX55.4"
+data_type = "Boolean"
+access_right = "读写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "HMI_CAMERO_GRIPPER_CLOSE_KEY"
+description = "HMI发出相机气爪关闭按键"
+register_type = "保持寄存器"
+start_address = 55
+length = 1
+kep_address = "%MX55.5"
+data_type = "Boolean"
+access_right = "读写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "HMI_REATE_MODELING_START_KEY"
+description = "HMI发出开始运行建模按键"
+register_type = "保持寄存器"
+start_address = 55
+length = 1
+kep_address = "%MX55.6"
+data_type = "Boolean"
+access_right = "读写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "HMI_CAMERO_GRAB_START_KEY"
+description = "HMI发出开始运行摄像头抓取按键"
+register_type = "保持寄存器"
+start_address = 55
+length = 1
+kep_address = "%MX55.7"
+data_type = "Boolean"
+access_right = "读写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "HMI_CAMERO_PUTDOWN_START_KEY"
+description = "HMI发出开始运行摄像头放下按键"
+register_type = "保持寄存器"
+start_address = 56
+length = 1
+kep_address = "%MX56.0"
+data_type = "Boolean"
+access_right = "读写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "HMI_CORRENT_ROBOT_CAMERO_TOOL_STATUS_SELECT_KEY"
+description = "HMI发出切换机器人相机工具状态按键"
+register_type = "保持寄存器"
+start_address = 56
+length = 1
+kep_address = "%MX56.1"
+data_type = "Boolean"
+access_right = "读写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "HMI_ROBOT_RECEIVE_TO_ORIGIN_DONE"
+description = "HMI显示机器人回原点完成状态指示"
+register_type = "保持寄存器"
+start_address = 58
+length = 1
+kep_address = "%MX58.0"
+data_type = "Boolean"
+access_right = "读写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "HMI_TOOL_QUICK_CHANGE_CABINET_OPEN_DONE"
+description = "HMI显示工具快换柜子已经打开状态指示"
+register_type = "保持寄存器"
+start_address = 58
+length = 1
+kep_address = "%MX58.1"
+data_type = "Boolean"
+access_right = "读写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "HMI_RAIL_RECEIVE_TO_ORIGIN_DONE"
+description = "HMI发出导轨回原点完成状态指示"
+register_type = "保持寄存器"
+start_address = 58
+length = 1
+kep_address = "%MX58.2"
+data_type = "Boolean"
+access_right = "读写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "HMI_REATE_MODELING_READY_DONE"
+description = "HMI发出准备创建模型准备完成状态指示"
+register_type = "保持寄存器"
+start_address = 58
+length = 1
+kep_address = "%MX58.3"
+data_type = "Boolean"
+access_right = "读写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "HMI_NO_CAMERO_PUT_DOWN_DONE"
+description = "HMI发出相机空安装座子已经放下状态指示"
+register_type = "保持寄存器"
+start_address = 58
+length = 1
+kep_address = "%MX58.4"
+data_type = "Boolean"
+access_right = "读写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "HMI_YES_CAMERO_LIFT_UP_DONE"
+description = "HMI发出相机已经拿起完成信号状态指示"
+register_type = "保持寄存器"
+start_address = 58
+length = 1
+kep_address = "%MX58.5"
+data_type = "Boolean"
+access_right = "读写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "HMI_REATE_MODELING_PROCESS_DONE"
+description = "HMI发出建模过程已经结束信号指示"
+register_type = "保持寄存器"
+start_address = 58
+length = 1
+kep_address = "%MX58.6"
+data_type = "Boolean"
+access_right = "读写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "HMI_RAIL_RECEIVE_REATE_MODELING_START_POINT_DONE"
+description = "HMI发出导轨已经到达扫描起始点信号指示"
+register_type = "保持寄存器"
+start_address = 58
+length = 1
+kep_address = "%MX58.7"
+data_type = "Boolean"
+access_right = "读写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "HMI_RAIL_RECEIVE_REATE_MODELING_END_POINT_DONE"
+description = "HMI发出导轨已经到达扫描终点信号指示"
+register_type = "保持寄存器"
+start_address = 59
+length = 1
+kep_address = "%MX59.0"
+data_type = "Boolean"
+access_right = "读写"
+scan_rate = 100
+enable = true
+
+[[tags]]
+group = ""
+name = "HMI_RAIL_RECEIVE_REATE_MODELING_INTERVAL_POINT_DONE"
+description = "HMI发出导轨已经到达扫描间隔点信号指示"
+register_type = "保持寄存器"
+start_address = 59
+length = 1
+kep_address = "%MX59.1"
+data_type = "Boolean"
+access_right = "读写"
+scan_rate = 100
+enable = true
