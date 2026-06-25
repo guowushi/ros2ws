@@ -1,6 +1,6 @@
 import asyncio
-from ..modbus_pkg.config_parser import ModbusConfig
-from ..modbus_pkg.robot_plc import RobotPlc
+from modbus_pkg.config_parser import ModbusConfig
+from modbus_pkg.robot_plc import RobotPlc
 
 config = ModbusConfig.from_file("config/modbus_config.toml")
 

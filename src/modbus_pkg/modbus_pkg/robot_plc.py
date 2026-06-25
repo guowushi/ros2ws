@@ -230,6 +230,7 @@ class RobotPlc:
             await self._client.write_tag(tag, value)
             logger.info("写入 %s (addr=%d): %s", name, tag.start_address, value)
 
+
     async def write_tags(self, values: dict[str, int | list[int]]) -> None:
         """批量写入多个标签。
 
@@ -289,3 +290,5 @@ class RobotPlc:
             for name, tag, value in direct_entries:
                 await self._client.write_tag(tag, value)
                 logger.info("写入 %s (addr=%d): %s", name, tag.start_address, value)
+
+    
