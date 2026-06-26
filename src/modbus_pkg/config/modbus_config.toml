@@ -1,5 +1,5 @@
 [modbus]
-ip = "192.168.3.7"
+ip = "192.168.3.100"
 port = 502
 description = "Modbus通信配置文件"
 version = "2026-03-13"
@@ -10,9 +10,9 @@ name = "A1"
 description = "关节轴角度基座旋转关节 (Base / Shoulder Pan Joint)"
 register_type = "保持寄存器"
 start_address = 1002
-length = 1
+length = 2
 kep_address = "%MW01002"
-data_type = "Short"
+data_type = "int32"
 access_right = "只读"
 scan_rate = 100
 enable = true

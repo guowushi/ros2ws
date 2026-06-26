@@ -1,0 +1,16 @@
+<library path="rqt_modbus_config">
+  <class
+    name="Modbus Config Table"
+    type="rqt_modbus_config.modbus_config_plugin.ModbusConfigPlugin"
+    base_class_type="rqt_gui_py::Plugin">
+    <description>
+      从 modbus_config.toml 读取寄存器标签配置，以表格形式展示。
+      支持按分组筛选和文本搜索。
+    </description>
+    <qtgui>
+      <label>Modbus Config Table</label>
+      <icon type="theme">utilities-terminal</icon>
+      <statustip>以表格形式展示 MODBUS 寄存器标签配置。</statustip>
+    </qtgui>
+  </class>
+</library>

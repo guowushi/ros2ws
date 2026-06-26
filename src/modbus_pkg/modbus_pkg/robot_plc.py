@@ -230,6 +230,15 @@ class RobotPlc:
             await self._client.write_tag(tag, value)
             logger.info("写入 %s (addr=%d): %s", name, tag.start_address, value)
 
+    async def write_SCAN_READY(self, value: int = 1) -> None:
+        """写入 SCAN_READY 标签，默认值为 1。
+
+        便捷方法，等价于 ``write_tag("SCAN_READY", value)``。
+
+        Args:
+            value: 要写入的值，默认为 1。
+        """
+        await self.write_tag("SCAN_READY", value)
 
     async def write_tags(self, values: dict[str, int | list[int]]) -> None:
         """批量写入多个标签。

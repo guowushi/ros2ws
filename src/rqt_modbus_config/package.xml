@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>rqt_modbus_config</name>
+  <version>0.0.1</version>
+  <description>rqt plugin — 以表格形式展示 modbus_config.toml 中的寄存器标签配置</description>
+  <maintainer email="dev@example.com">dev</maintainer>
+  <license>TODO</license>
+
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <depend>rqt_gui</depend>
+  <depend>rqt_gui_py</depend>
+  <depend>modbus_pkg</depend>
+  <depend>ament_index_python</depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+    <rqt_gui plugin="${prefix}/plugin.xml"/>
+  </export>
+</package>
