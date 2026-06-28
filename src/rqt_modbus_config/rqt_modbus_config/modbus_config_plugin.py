@@ -7,6 +7,7 @@
 from __future__ import annotations
 
 import os
+import struct
 from pathlib import Path
 from typing import Optional
 
@@ -23,6 +24,7 @@ from python_qt_binding.QtWidgets import (
     QHeaderView,
     QLabel,
     QLineEdit,
+    QMessageBox,
     QPushButton,
     QSpinBox,
     QTableWidget,
@@ -47,6 +49,7 @@ COLUMNS = [
     ("access_right", "读写权限"),
     ("scan_rate", "扫描周期(ms)"),
     ("current_value", "当前值"),
+    ("raw_value", "寄存器原始值"),
     ("enable", "启用"),
 ]
 
@@ -127,6 +130,11 @@ class ModbusConfigPlugin(Plugin):
         # ---- 自动轮询定时器 ----
         self._poll_timer = QTimer(self)
         self._poll_timer.timeout.connect(self._on_poll_tick)
+
+        # ---- 连接超时看门狗 ----
+        self._connect_timeout_timer = QTimer(self)
+        self._connect_timeout_timer.setSingleShot(True)
+        self._connect_timeout_timer.timeout.connect(self._on_connect_timeout)
 
         # 注册到 rqt
         context.add_widget(self._main_widget)
@@ -404,8 +412,9 @@ class ModbusConfigPlugin(Plugin):
             else:
                 bg = QColor(255, 255, 255)
 
-            # 当前值
+            # 当前值 / 原始寄存器值
             value_text, value_fg, value_tip = self._format_current_value(tag.name)
+            raw_text, raw_fg, raw_tip = self._format_raw_value(tag.name)
 
             values = [
                 tag.group,
@@ -418,8 +427,9 @@ class ModbusConfigPlugin(Plugin):
                 tag.data_type,
                 tag.access_right,
                 str(tag.scan_rate),
-                value_text,          # 当前值
-                "✓" if tag.enable else "✗",
+                value_text,          # 当前值 (col 10)
+                raw_text,            # 寄存器原始值 (col 11)
+                "✓" if tag.enable else "✗",  # 启用 (col 12)
             ]
 
             for col, val in enumerate(values):
@@ -433,6 +443,11 @@ class ModbusConfigPlugin(Plugin):
                     item.setForeground(value_fg)
                 if col == 10 and value_tip:
                     item.setToolTip(value_tip)
+                # 寄存器原始值列特殊颜色
+                if col == 11 and raw_fg is not None and tag.enable:
+                    item.setForeground(raw_fg)
+                if col == 11 and raw_tip:
+                    item.setToolTip(raw_tip)
                 # 起始地址右对齐
                 if col == 4:
                     item.setTextAlignment(
@@ -444,8 +459,28 @@ class ModbusConfigPlugin(Plugin):
     #  当前值格式化
     # ==================================================================
 
+    @staticmethod
+    def _combine_le(values: list[int]) -> int:
+        """将多个 16 位寄存器按小端方式组合为一个整数。
+
+        values[0] 为最低有效字 (LSW, bit 0-15),
+        values[1] 为次低字 (bit 16-31), 以此类推。
+        """
+        combined = 0
+        for i, v in enumerate(values):
+            combined |= (v & 0xFFFF) << (16 * i)
+        return combined
+
+    @staticmethod
+    def _sign_extend(value: int, bits: int) -> int:
+        """对有符号整数进行符号扩展。"""
+        mask = (1 << bits) - 1
+        if value & (1 << (bits - 1)):
+            return value - (1 << bits)
+        return value
+
     def _format_current_value(self, tag_name: str) -> tuple[str, Optional[QColor], str]:
-        """格式化标签当前值。
+        """根据 data_type 将原始寄存器值转换为实际物理值。
 
         Returns:
             (显示文本, 前景色(None=默认), 提示文本)
@@ -458,21 +493,137 @@ class ModbusConfigPlugin(Plugin):
         if not tv.values:
             return ("—", None, "")
 
-        # 布尔标签：提取对应 bit 位
-        if tv.tag.data_type == "Boolean":
+        dt = tv.tag.data_type
+
+        # ---- Boolean: 按位提取 ----
+        if dt == "Boolean":
             bit = _parse_kep_bit(tv.tag.kep_address)
             if bit is not None and tv.values:
                 raw = tv.values[0]
                 val = (raw >> bit) & 1
-                return (str(val), None, f"原始寄存器值: {raw} (bit {bit})")
+                return (str(val), None, f"寄存器值: 0x{raw:04X} (bit {bit})")
+            return ("—", None, "无法解析位偏移")
 
-        # 单值
+        # ---- Word: 16 位无符号 ----
+        if dt == "Word":
+            val = tv.values[0] & 0xFFFF
+            scaled = val * tv.tag.scale
+            if tv.tag.scale != 1.0:
+                return (f"{scaled:.2f}", None, f"原始值: {val}  ×  scale={tv.tag.scale}")
+            return (str(val), None, f"0x{val:04X}")
+
+        # ---- Short: 16 位有符号 ----
+        if dt == "Short":
+            val = self._sign_extend(tv.values[0] & 0xFFFF, 16)
+            scaled = val * tv.tag.scale
+            if tv.tag.scale != 1.0:
+                return (f"{scaled:.2f}", None, f"原始值: {val}  ×  scale={tv.tag.scale}")
+            return (str(val), None, f"0x{tv.values[0] & 0xFFFF:04X}")
+
+        # ---- int32 / DWord / uint32: 32 位整数 ----
+        if dt in ("int32", "DWord", "uint32"):
+            combined = self._combine_le(tv.values[:2])
+            if dt == "int32":
+                val = self._sign_extend(combined, 32)
+            else:
+                val = combined  # unsigned
+            scaled = val * tv.tag.scale
+            if tv.tag.scale != 1.0:
+                return (f"{scaled:.2f}", None,
+                        f"原始值: {val}  ×  scale={tv.tag.scale}")
+            return (str(val), None, f"0x{combined:08X}")
+
+        # ---- Float: 32 位浮点数 ----
+        if dt == "Float":
+            combined = self._combine_le(tv.values[:2])
+            try:
+                fval = struct.unpack("<f", struct.pack("<I", combined))[0]
+            except Exception:
+                return ("—", None, f"无法解析 float: 0x{combined:08X}")
+            return (f"{fval:.6g}", None, f"0x{combined:08X}  →  float32")
+
+        # ---- Float Array: 每 2 寄存器为一个 float32 ----
+        if dt == "Float Array":
+            vals = tv.values
+            floats = []
+            raw_pairs = []
+            for i in range(0, len(vals) - 1, 2):
+                combined = self._combine_le(vals[i:i + 2])
+                try:
+                    fval = struct.unpack("<f", struct.pack("<I", combined))[0]
+                    floats.append(f"{fval:.6g}")
+                    raw_pairs.append(f"0x{combined:08X}")
+                except Exception:
+                    floats.append("?")
+                    raw_pairs.append("?")
+            # 多余的单个寄存器
+            if len(vals) % 2:
+                floats.append(f"({vals[-1] & 0xFFFF})")
+            tip = "float32: " + ", ".join(raw_pairs) if raw_pairs else ""
+            return (", ".join(floats), None, tip)
+
+        # ---- Long Array: 每 2 寄存器为一个 int32 ----
+        if dt == "Long Array":
+            vals = tv.values
+            ints = []
+            raw_vals = []
+            for i in range(0, len(vals) - 1, 2):
+                combined = self._combine_le(vals[i:i + 2])
+                signed = self._sign_extend(combined, 32)
+                ints.append(str(signed))
+                raw_vals.append(f"0x{combined:08X}")
+            # 多余的单个寄存器
+            if len(vals) % 2:
+                ints.append(str(vals[-1] & 0xFFFF))
+            tip = "int32: " + ", ".join(raw_vals) if raw_vals else ""
+            return (", ".join(ints), None, tip)
+
+        # ---- String: ASCII 解码 ----
+        if dt == "String":
+            raw_bytes = bytearray()
+            for v in tv.values:
+                raw_bytes.append(v & 0xFF)      # 低字节
+                raw_bytes.append((v >> 8) & 0xFF)  # 高字节
+            # 去除尾部 null
+            decoded = raw_bytes.decode("ascii", errors="replace").rstrip("\x00")
+            return (decoded, None, f"原始字节: {raw_bytes.hex(' ')}")
+
+        # ---- 回退：未知类型按原始逻辑处理 ----
         if len(tv.values) == 1:
-            return (str(tv.values[0]), None, "")
-
-        # 多值
+            return (str(tv.values[0]), None, f"未知类型 {dt}")
         text = ", ".join(str(v) for v in tv.values)
-        return (text, None, "")
+        return (text, None, f"未知类型 {dt}")
+
+    def _format_raw_value(self, tag_name: str) -> tuple[str, Optional[QColor], str]:
+        """格式化寄存器原始值（多字节按小端方式组合显示）。
+
+        每个寄存器为 16 位，多个寄存器按小端顺序组合：
+        values[0] 为最低有效字（LSW），values[1] 为次低字，以此类推。
+
+        Returns:
+            (显示文本, 前景色(None=默认), 提示文本)
+        """
+        tv = self._latest_values.get(tag_name)
+        if tv is None:
+            return ("—", None, "")
+        if tv.error:
+            return ("ERR", QColor(220, 30, 30), tv.error)
+        if not tv.values:
+            return ("—", None, "")
+
+        # 按小端方式组合多个寄存器值
+        # values[0] 为低字 (bit 0-15), values[1] 为高字 (bit 16-31), ...
+        combined = 0
+        for i, v in enumerate(tv.values):
+            combined |= (v & 0xFFFF) << (16 * i)
+
+        if len(tv.values) == 1:
+            return (f"0x{combined:04X}", None, str(combined))
+
+        # 多寄存器：显示组合值和各寄存器明细
+        tip_parts = [f"0x{v:04X}" for v in tv.values]
+        tip = "寄存器: " + ", ".join(tip_parts) + f"  →  小端组合: {combined}"
+        return (f"0x{combined:0{len(tv.values) * 4}X}", None, tip)
 
     # ==================================================================
     #  筛选
@@ -517,6 +668,8 @@ class ModbusConfigPlugin(Plugin):
         self._status_indicator.setText("● 连接中…")
         self._status_indicator.setStyleSheet("color: #c90; font-weight: bold;")
         self._update_button_states()
+        # 启动连接超时看门狗（8 秒）
+        self._connect_timeout_timer.start(8000)
         self._worker.schedule_connect()
 
     def _on_disconnect_clicked(self) -> None:
@@ -545,24 +698,59 @@ class ModbusConfigPlugin(Plugin):
 
     def _on_connection_changed(self, connected: bool, message: str) -> None:
         """PLC 连接状态变化处理。"""
+        self._connect_timeout_timer.stop()  # 收到结果，停止看门狗
         self._connected = connected
 
         if connected:
             self._status_indicator.setText("● 已连接")
             self._status_indicator.setStyleSheet("color: green; font-weight: bold;")
+            self._set_status(message, ok=True)
             # 连接成功后自动读取一次
             self._worker.schedule_read()
-        else:
+        elif "连接失败" in message:
+            # 主动连接失败：红色 + 弹窗
             self._poll_timer.stop()
-            if "失败" in message or "无法" in message:
-                self._status_indicator.setText("● 错误")
-                self._status_indicator.setStyleSheet("color: red; font-weight: bold;")
-            else:
-                self._status_indicator.setText("● 未连接")
-                self._status_indicator.setStyleSheet("color: #888; font-weight: bold;")
+            self._status_indicator.setText("● 错误")
+            self._status_indicator.setStyleSheet("color: red; font-weight: bold;")
+            self._set_status(message, ok=False)
+            QMessageBox.warning(
+                self._main_widget,
+                "连接失败",
+                f"MODBUS 连接失败\n\n{message}\n\n请检查：\n"
+                "  • PLC 是否已上电\n"
+                "  • IP 地址和端口是否正确\n"
+                "  • 网线连接是否正常",
+            )
+        elif "未连接，无法读取" in message or "已断开" in message:
+            # 意外断连或主动断开：灰色"未连接"，不弹窗
+            self._poll_timer.stop()
+            self._status_indicator.setText("● 未连接")
+            self._status_indicator.setStyleSheet("color: #888; font-weight: bold;")
+            self._set_status(message, ok=True)
+        else:
+            # 其他未连接状态（如"未加载配置文件"）
+            self._poll_timer.stop()
+            self._status_indicator.setText("● 未连接")
+            self._status_indicator.setStyleSheet("color: #888; font-weight: bold;")
+            self._set_status(message, ok=False)
 
-        self._set_status(message, ok=connected)
         self._update_button_states()
+
+    def _on_connect_timeout(self) -> None:
+        """连接超时看门狗触发 — 连接无响应时主动提示失败。"""
+        self._status_indicator.setText("● 错误")
+        self._status_indicator.setStyleSheet("color: red; font-weight: bold;")
+        self._set_status("连接超时: PLC 无响应", ok=False)
+        self._update_button_states()
+        QMessageBox.warning(
+            self._main_widget,
+            "连接超时",
+            "MODBUS 连接超时\n\nPLC 在 8 秒内未响应连接请求。\n\n请检查：\n"
+            "  • PLC 是否已上电\n"
+            "  • IP 地址和端口是否正确\n"
+            "  • 网线连接是否正常\n"
+            "  • 防火墙是否阻止了 MODBUS TCP 端口 (默认 502)",
+        )
 
     def _on_data_ready(self, results: dict) -> None:
         """PLC 数据读取完成处理。"""

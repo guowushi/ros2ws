@@ -7,7 +7,7 @@
 - robot_interfaces        ← 接口包
 - robot_bringup           ← 启动包
 - robot_ui                ← 界面包
-
+- rqt_modbus_config                 ← RQT插件包，实现读取modbus数据的功能
 
 每个包下
 - config目录： 存放配置

@@ -44,6 +44,7 @@ data_type = "int32"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 0.01
 
 [[tags]]
 group = "机器人坐标"
@@ -57,6 +58,7 @@ data_type = "int32"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 0.01
 
 [[tags]]
 group = "机器人坐标"
@@ -70,6 +72,7 @@ data_type = "int32"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 0.01
 
 [[tags]]
 group = "机器人坐标"
@@ -83,6 +86,7 @@ data_type = "int32"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = "机器人坐标"
@@ -96,6 +100,7 @@ data_type = "int32"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = "机器人坐标"
@@ -109,6 +114,7 @@ data_type = "int32"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = "机器人坐标"
@@ -122,6 +128,7 @@ data_type = "int32"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = "机器人坐标"
@@ -135,6 +142,7 @@ data_type = "int32"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = "机器人坐标"
@@ -148,6 +156,7 @@ data_type = "int32"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = "机器人坐标"
@@ -161,6 +170,7 @@ data_type = "int32"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = "外部旋转轴"
@@ -174,6 +184,7 @@ data_type = "int32"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = "外部旋转轴"
@@ -187,6 +198,7 @@ data_type = "Short"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = "外部旋转轴"
@@ -200,6 +212,7 @@ data_type = "Short"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = "外部旋转轴"
@@ -213,6 +226,7 @@ data_type = "Short"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = "外部旋转轴"
@@ -226,6 +240,7 @@ data_type = "Short"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = "外部旋转轴"
@@ -239,6 +254,7 @@ data_type = "Short"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = "外部直线轴"
@@ -252,6 +268,7 @@ data_type = "Short"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = "外部直线轴"
@@ -265,6 +282,7 @@ data_type = "Short"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = "外部直线轴"
@@ -278,6 +296,7 @@ data_type = "Short"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = "外部直线轴"
@@ -291,6 +310,7 @@ data_type = "Short"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = "外部直线轴"
@@ -304,6 +324,7 @@ data_type = "Short"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = "外部直线轴"
@@ -317,6 +338,7 @@ data_type = "Short"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = "外部轴使能"
@@ -330,6 +352,7 @@ data_type = "Boolean"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = "外部轴使能"
@@ -343,6 +366,7 @@ data_type = "Boolean"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = "外部轴使能"
@@ -356,6 +380,7 @@ data_type = "Boolean"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = "外部轴使能"
@@ -369,6 +394,7 @@ data_type = "Boolean"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = "外部轴使能"
@@ -382,6 +408,7 @@ data_type = "Boolean"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = "外部轴使能"
@@ -395,6 +422,7 @@ data_type = "Boolean"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = "外部轴到位"
@@ -408,6 +436,7 @@ data_type = "Boolean"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = "外部轴到位"
@@ -421,6 +450,7 @@ data_type = "Boolean"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = "外部轴到位"
@@ -434,6 +464,7 @@ data_type = "Boolean"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = "外部轴到位"
@@ -447,6 +478,7 @@ data_type = "Boolean"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = "外部轴到位"
@@ -460,6 +492,7 @@ data_type = "Boolean"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = "外部轴到位"
@@ -473,6 +506,7 @@ data_type = "Boolean"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = "外部轴运动"
@@ -486,6 +520,7 @@ data_type = "Boolean"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = "外部轴运动"
@@ -499,6 +534,7 @@ data_type = "Boolean"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = "外部轴运动"
@@ -512,6 +548,7 @@ data_type = "Boolean"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = "外部轴运动"
@@ -525,6 +562,7 @@ data_type = "Boolean"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = "外部轴运动"
@@ -538,6 +576,7 @@ data_type = "Boolean"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = "外部轴运动"
@@ -551,6 +590,7 @@ data_type = "Boolean"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = "统计数据"
@@ -560,10 +600,11 @@ register_type = "保持寄存器"
 start_address = 7500
 length = 2
 kep_address = "%MW07500"
-data_type = "DWord"
+data_type = "uint32"
 access_right = "读写"
 scan_rate = 1000
 enable = true
+scale = 1
 
 [[tags]]
 group = "统计数据"
@@ -573,10 +614,11 @@ register_type = "保持寄存器"
 start_address = 7502
 length = 2
 kep_address = "%MW07502"
-data_type = "DWord"
+data_type = "uint32"
 access_right = "读写"
 scan_rate = 1000
 enable = true
+scale = 1
 
 [[tags]]
 group = "统计数据"
@@ -586,10 +628,11 @@ register_type = "保持寄存器"
 start_address = 7504
 length = 2
 kep_address = "%MW07504"
-data_type = "DWord"
+data_type = "uint32"
 access_right = "读写"
 scan_rate = 1000
 enable = true
+scale = 1
 
 [[tags]]
 group = "统计数据"
@@ -597,12 +640,13 @@ name = "POWERON_TIME"
 description = "当班开机时间"
 register_type = "保持寄存器"
 start_address = 7506
-length = 1
+length = 2
 kep_address = "%MW07506"
-data_type = "Word"
+data_type = "uint32"
 access_right = "读写"
 scan_rate = 1000
 enable = true
+scale = 1
 
 [[tags]]
 group = "统计数据"
@@ -610,12 +654,13 @@ name = "POLISH_TIME"
 description = "当班打磨时间"
 register_type = "保持寄存器"
 start_address = 7508
-length = 1
+length = 2
 kep_address = "%MW07508"
-data_type = "Word"
+data_type = "uint32"
 access_right = "读写"
 scan_rate = 1000
 enable = true
+scale = 1
 
 [[tags]]
 group = "统计数据"
@@ -623,12 +668,13 @@ name = "POLISH_AREA"
 description = "当班打磨面积"
 register_type = "保持寄存器"
 start_address = 7510
-length = 1
+length = 2
 kep_address = "%MW07510"
-data_type = "Word"
+data_type = "uint32"
 access_right = "读写"
 scan_rate = 1000
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -642,6 +688,7 @@ data_type = "String"
 access_right = "读写"
 scan_rate = 1000
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -649,12 +696,13 @@ name = "PROCESS_PARAM_PRESS"
 description = "工艺参数-打磨压力"
 register_type = "保持寄存器"
 start_address = 7600
-length = 1
+length = 2
 kep_address = "%MW07600"
-data_type = "Word"
+data_type = "uint32"
 access_right = "只读"
 scan_rate = 1000
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -662,12 +710,13 @@ name = "PROCESS_PARAM_WALKING_SPEED"
 description = "工艺参数-打磨工具转速"
 register_type = "保持寄存器"
 start_address = 7602
-length = 1
+length = 2
 kep_address = "%MW07602"
-data_type = "Word"
+data_type = "uint32"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -675,12 +724,13 @@ name = "PROCESS_PARAM_ROTATE_SPEED"
 description = "工艺参数-行走速度"
 register_type = "保持寄存器"
 start_address = 7604
-length = 1
+length = 2
 kep_address = "%MW07604"
-data_type = "Word"
+data_type = "uint32"
 access_right = "只读"
 scan_rate = 1000
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -694,6 +744,7 @@ data_type = "Boolean"
 access_right = "读写"
 scan_rate = 1000
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -707,6 +758,7 @@ data_type = "Boolean"
 access_right = "读写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -720,6 +772,7 @@ data_type = "Boolean"
 access_right = "读写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -733,6 +786,7 @@ data_type = "Boolean"
 access_right = "读写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -746,6 +800,7 @@ data_type = "Boolean"
 access_right = "读写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -759,6 +814,7 @@ data_type = "Boolean"
 access_right = "读写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -772,6 +828,7 @@ data_type = "Boolean"
 access_right = "读写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -785,6 +842,7 @@ data_type = "Boolean"
 access_right = "读写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -798,6 +856,7 @@ data_type = "String"
 access_right = "读写"
 scan_rate = 1000
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -805,12 +864,13 @@ name = "PATHS_COUNT"
 description = "已计算出来的总路径条数"
 register_type = "保持寄存器"
 start_address = 7930
-length = 1
+length = 2
 kep_address = "%MW07930"
-data_type = "Word"
+data_type = "uint32"
 access_right = "读写"
 scan_rate = 1000
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -820,10 +880,11 @@ register_type = "保持寄存器"
 start_address = 7932
 length = 2
 kep_address = "%MW07932"
-data_type = "DWord"
+data_type = "uint32"
 access_right = "读写"
 scan_rate = 1000
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -831,12 +892,13 @@ name = "PATHS_IDX"
 description = "需要打磨路径的编号"
 register_type = "保持寄存器"
 start_address = 7934
-length = 1
+length = 2
 kep_address = "%MW07934"
-data_type = "Word"
+data_type = "uint32"
 access_right = "读写"
 scan_rate = 1000
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -846,10 +908,11 @@ register_type = "保持寄存器"
 start_address = 7936
 length = 2
 kep_address = "%MW07936"
-data_type = "DWord"
+data_type = "uint32"
 access_right = "读写"
 scan_rate = 1000
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -857,12 +920,13 @@ name = "REQ_PATH_IDX"
 description = "PLC请求的当前路径编号"
 register_type = "保持寄存器"
 start_address = 7938
-length = 1
+length = 2
 kep_address = "%MW07938"
-data_type = "Word"
+data_type = "uint32"
 access_right = "读写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -876,6 +940,7 @@ data_type = "String"
 access_right = "读写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -883,12 +948,13 @@ name = "RESP_PAGE_SIZE"
 description = "PC写入-分页尺寸"
 register_type = "保持寄存器"
 start_address = 7950
-length = 1
+length = 2
 kep_address = "%MW07950"
-data_type = "Word"
+data_type = "uint32"
 access_right = "读写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -896,12 +962,13 @@ name = "RESP_PAGE_COUNT"
 description = "PC写入-当前路径的总页数"
 register_type = "保持寄存器"
 start_address = 7952
-length = 1
+length = 2
 kep_address = "%MW07952"
-data_type = "Word"
+data_type = "uint32"
 access_right = "读写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -909,12 +976,13 @@ name = "REQ_PAGE_IDX"
 description = "PLC请求页码"
 register_type = "保持寄存器"
 start_address = 7954
-length = 1
+length = 2
 kep_address = "%MW07954"
-data_type = "Word"
+data_type = "uint32"
 access_right = "读写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -924,10 +992,11 @@ register_type = "保持寄存器"
 start_address = 7956
 length = 2
 kep_address = "%MW07956"
-data_type = "DWord"
+data_type = "uint32"
 access_right = "读写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -937,10 +1006,11 @@ register_type = "保持寄存器"
 start_address = 7958
 length = 2
 kep_address = "%MW07958"
-data_type = "DWord"
+data_type = "uint32"
 access_right = "读写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -954,6 +1024,7 @@ data_type = "Float Array"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -967,6 +1038,7 @@ data_type = "Float Array"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -980,6 +1052,7 @@ data_type = "Float Array"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -987,12 +1060,13 @@ name = "STAT_ERR_CODE"
 description = "当前状态-错误代码"
 register_type = "保持寄存器"
 start_address = 7804
-length = 1
+length = 2
 kep_address = "%MW07804"
-data_type = "Word"
+data_type = "uint32"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1006,6 +1080,7 @@ data_type = "Long Array"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1019,6 +1094,7 @@ data_type = "Long Array"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1032,6 +1108,7 @@ data_type = "Long Array"
 access_right = "只读"
 scan_rate = 1000
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1045,6 +1122,7 @@ data_type = "Long Array"
 access_right = "只读"
 scan_rate = 1000
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1052,12 +1130,13 @@ name = "STAT_POWER"
 description = "当前用功率"
 register_type = "保持寄存器"
 start_address = 7830
-length = 1
+length = 2
 kep_address = "%MW07830"
-data_type = "Word"
+data_type = "uint32"
 access_right = "只读"
 scan_rate = 1000
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1067,10 +1146,11 @@ register_type = "保持寄存器"
 start_address = 7832
 length = 2
 kep_address = "%MW07832"
-data_type = "DWord"
+data_type = "uint32"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1078,12 +1158,13 @@ name = "STAT_PRESSURE"
 description = "当前气压"
 register_type = "保持寄存器"
 start_address = 7834
-length = 1
+length = 2
 kep_address = "%MW07834"
-data_type = "Word"
+data_type = "uint32"
 access_right = "只读"
 scan_rate = 1000
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1091,12 +1172,13 @@ name = "STAT_WATER_PRESSURE"
 description = "当前水压"
 register_type = "保持寄存器"
 start_address = 7836
-length = 1
+length = 2
 kep_address = "%MW07836"
-data_type = "Word"
+data_type = "uint32"
 access_right = "只读"
 scan_rate = 1000
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1104,12 +1186,13 @@ name = "STAT_WATER_FLOW"
 description = "冷却水流量"
 register_type = "保持寄存器"
 start_address = 7838
-length = 1
+length = 2
 kep_address = "%MW07838"
-data_type = "Word"
+data_type = "uint32"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1117,12 +1200,13 @@ name = "STAT_WHEEL_RADIUS"
 description = "砂轮半径"
 register_type = "保持寄存器"
 start_address = 7840
-length = 1
+length = 2
 kep_address = "%MW07840"
-data_type = "Word"
+data_type = "uint32"
 access_right = "只读"
 scan_rate = 1000
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1136,6 +1220,7 @@ data_type = "Float"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1149,6 +1234,7 @@ data_type = "Long Array"
 access_right = "读写"
 scan_rate = 1000
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1162,6 +1248,7 @@ data_type = "Long Array"
 access_right = "只写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1175,6 +1262,7 @@ data_type = "Long Array"
 access_right = "只写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1188,6 +1276,7 @@ data_type = "Float Array"
 access_right = "只写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1201,6 +1290,7 @@ data_type = "Float Array"
 access_right = "只写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1214,6 +1304,7 @@ data_type = "Float Array"
 access_right = "只写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1227,6 +1318,7 @@ data_type = "Float Array"
 access_right = "只写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1240,6 +1332,7 @@ data_type = "Float Array"
 access_right = "只写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1253,6 +1346,7 @@ data_type = "Float Array"
 access_right = "只写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1266,6 +1360,7 @@ data_type = "Float Array"
 access_right = "只写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1279,6 +1374,7 @@ data_type = "Float Array"
 access_right = "只写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1292,6 +1388,7 @@ data_type = "Float Array"
 access_right = "只写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1305,6 +1402,7 @@ data_type = "Float Array"
 access_right = "只写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1318,6 +1416,7 @@ data_type = "Float Array"
 access_right = "只写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1331,6 +1430,7 @@ data_type = "Float Array"
 access_right = "只写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1344,6 +1444,7 @@ data_type = "Float Array"
 access_right = "只写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1357,6 +1458,7 @@ data_type = "Float Array"
 access_right = "只写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1370,6 +1472,7 @@ data_type = "String"
 access_right = "只写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1383,6 +1486,7 @@ data_type = "Float Array"
 access_right = "只写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1396,6 +1500,7 @@ data_type = "Float Array"
 access_right = "只写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1403,12 +1508,13 @@ name = "SCAN_GAP_Y"
 description = "扫描相关-扫描拍照间距纵向"
 register_type = "保持寄存器"
 start_address = 7740
-length = 1
+length = 2
 kep_address = "%MW07740"
-data_type = "Word"
+data_type = "uint32"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1416,12 +1522,13 @@ name = "SCAN_GAP_X"
 description = "扫描相关-扫描拍照间距横向"
 register_type = "保持寄存器"
 start_address = 7742
-length = 1
+length = 2
 kep_address = "%MW07742"
-data_type = "Word"
+data_type = "uint32"
 access_right = "只读"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1429,12 +1536,13 @@ name = "SCAN_SPEED"
 description = "扫描相关-扫描时移动速度"
 register_type = "保持寄存器"
 start_address = 7744
-length = 1
+length = 2
 kep_address = "%MW07744"
-data_type = "Word"
+data_type = "uint32"
 access_right = "读写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = "扫描标志位"
@@ -1448,6 +1556,7 @@ data_type = "Boolean"
 access_right = "读写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = "扫描标志位"
@@ -1461,6 +1570,7 @@ data_type = "Boolean"
 access_right = "读写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = "扫描标志位"
@@ -1474,6 +1584,7 @@ data_type = "Boolean"
 access_right = "只写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = "扫描标志位"
@@ -1487,6 +1598,7 @@ data_type = "Boolean"
 access_right = "读写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = "扫描标志位"
@@ -1500,6 +1612,7 @@ data_type = "Boolean"
 access_right = "读写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = "扫描标志位"
@@ -1513,6 +1626,7 @@ data_type = "Boolean"
 access_right = "读写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = "扫描标志位"
@@ -1526,6 +1640,7 @@ data_type = "Boolean"
 access_right = "读写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = "扫描标志位"
@@ -1539,6 +1654,7 @@ data_type = "Boolean"
 access_right = "读写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1552,6 +1668,7 @@ data_type = "Boolean"
 access_right = "读写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1565,6 +1682,7 @@ data_type = "Boolean"
 access_right = "读写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1578,6 +1696,7 @@ data_type = "Boolean"
 access_right = "读写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1591,6 +1710,7 @@ data_type = "Boolean"
 access_right = "读写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1604,6 +1724,7 @@ data_type = "Boolean"
 access_right = "读写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1617,6 +1738,7 @@ data_type = "Boolean"
 access_right = "读写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1630,6 +1752,7 @@ data_type = "Boolean"
 access_right = "读写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1643,6 +1766,7 @@ data_type = "Boolean"
 access_right = "读写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1656,6 +1780,7 @@ data_type = "Boolean"
 access_right = "读写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1669,6 +1794,7 @@ data_type = "Boolean"
 access_right = "读写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1682,6 +1808,7 @@ data_type = "Boolean"
 access_right = "读写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1695,6 +1822,7 @@ data_type = "Boolean"
 access_right = "读写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1708,6 +1836,7 @@ data_type = "Boolean"
 access_right = "读写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1721,6 +1850,7 @@ data_type = "Boolean"
 access_right = "读写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1734,6 +1864,7 @@ data_type = "Boolean"
 access_right = "读写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1747,6 +1878,7 @@ data_type = "Boolean"
 access_right = "读写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1760,6 +1892,7 @@ data_type = "Boolean"
 access_right = "读写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1773,6 +1906,7 @@ data_type = "Boolean"
 access_right = "读写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1786,6 +1920,7 @@ data_type = "Boolean"
 access_right = "读写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1799,6 +1934,7 @@ data_type = "Boolean"
 access_right = "读写"
 scan_rate = 100
 enable = true
+scale = 1
 
 [[tags]]
 group = ""
@@ -1812,3 +1948,4 @@ data_type = "Boolean"
 access_right = "读写"
 scan_rate = 100
 enable = true
+scale = 1

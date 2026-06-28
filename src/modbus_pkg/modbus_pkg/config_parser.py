@@ -26,6 +26,7 @@ class ModbusTag:
     access_right: str
     scan_rate: int
     enable: bool
+    scale: float = 1.0
 
 
 @dataclass
@@ -72,6 +73,7 @@ class ModbusConfig:
                 access_right=t.get("access_right", ""),
                 scan_rate=t.get("scan_rate", 100),
                 enable=t.get("enable", True),
+                scale=t.get("scale", 1.0),
             )
             for t in raw.get("tags", [])
         ]
