@@ -10,7 +10,14 @@ setup(
         ("share/" + package_name, ["package.xml"]),
         ("share/" + package_name + "/config", ["config/modbus_config.toml"]),
         ("share/ament_index/resource_index/packages", ["resource/" + package_name]),
+        ("lib/" + package_name, ["scripts/plc_worker"]),
     ],
     install_requires=["setuptools"],
     zip_safe=True,
+    scripts=["scripts/plc_worker"],
+    entry_points={
+        "console_scripts": [
+            "plc_worker = modbus_pkg.plc_worker:main",
+        ],
+    },
 )

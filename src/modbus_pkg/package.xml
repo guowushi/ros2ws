@@ -10,6 +10,8 @@
   <buildtool_depend>ament_python</buildtool_depend>
 
   <depend>rclpy</depend>
+  <depend>lifecycle_msgs</depend>
+  <depend>std_msgs</depend>
   <depend>python3-tomllib</depend>
   <depend>python3-pymodbus</depend>
 

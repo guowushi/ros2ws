@@ -23,3 +23,10 @@
  - 运行MODBUS包： ros2 run modbus_pkg robot_plc
  - 运行界面包： ros2 run robot_ui robot_ui
 
+# 运行zenoh-bridge-ros2dds
+/home/guowushi/zenoh &&./zenoh-bridge-ros2dds -c config.json5
+
+
+
+
+
