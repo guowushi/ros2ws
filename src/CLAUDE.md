@@ -14,3 +14,12 @@
 - test目录：存放测试文件，每次测试结果使用markdown格式保存下来，文件名为YYYYMM-DD-HHmm.md格式
 - logs目录：存放日志文件，文件名为YYYYMMDD-HHmm.log格式
 
+
+# 编译
+ - 编译MODBUS包： colcon build --packages-select modbus_pkg
+ - 编译界面包： colcon build --packages-select robot_ui
+  
+# 运行
+ - 运行MODBUS包： ros2 run modbus_pkg robot_plc
+ - 运行界面包： ros2 run robot_ui robot_ui
+

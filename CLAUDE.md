@@ -16,3 +16,7 @@
 - ROS2版本：Jazzy 
 - ROS2安装路径： /opt/ros/jazzy
 - ROS2工作空间路径：~/ros2ws
+- 三维建模包：gemini435le_3d_modeling  工作空间路径： ~/gemini435le_3d_modeling_ws
+- 相机包： camera_py_pkg  工作空间路径： ~/camera_gemini435_ws
+
+# 编译
