@@ -16,7 +16,8 @@
 
 
 # 编译
- - 编译MODBUS包： colcon build --packages-select modbus_pkg
+ - 编译所有的ros2包：colcon build
+ - 编译指定的包，例如MODBUS包： colcon build --packages-select modbus_pkg
  - 编译界面包： colcon build --packages-select robot_ui
   
 # 运行
@@ -24,7 +25,8 @@
  - 运行界面包： ros2 run robot_ui robot_ui
 
 # 运行zenoh-bridge-ros2dds
-/home/guowushi/zenoh &&./zenoh-bridge-ros2dds -c config.json5
+- 在工控机上运行/app/zenoh目录下的命令，能将数据转发到不同的网络上。
+- 在开发机上运行命令连接工控机：/home/guowushi/zenoh && ./zenoh-bridge-ros2dds -c config.json5
 
 
 

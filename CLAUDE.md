@@ -20,3 +20,10 @@
 - 相机包： camera_py_pkg  工作空间路径： ~/camera_gemini435_ws
 
 # 编译
+- 进入ros2工作空间：cd ~/ros2ws
+- 编译所有的ros2包：colcon build   
+
+
+# 运行
+- 运行lifecycle节点： ros2 run modbus_pkg robot_plc
+- 
